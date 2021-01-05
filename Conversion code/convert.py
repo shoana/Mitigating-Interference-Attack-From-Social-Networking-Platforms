@@ -10,4 +10,4 @@ df = pd.DataFrame(data)
 # convert the data 
 connection = sqlite3.connect("data.sql") # will create this file in the same folder as the json file (can also be changed to "data.db")
 c = connection.cursor()
-df.to_sql("installed_apps",connection)
+df.to_sql("events",connection)
