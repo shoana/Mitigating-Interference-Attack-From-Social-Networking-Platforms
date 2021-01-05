@@ -1,8 +1,94 @@
 {
-  "installed_apps": [
+  "events_invited": [
     {
-      "name": "Spotify",
-      "added_timestamp": 1513053219
+      "name": "NEM with WISE",
+      "start_timestamp": 1585693800,
+      "end_timestamp": 1585704600
+    },
+    {
+      "name": "Professional Online Portfolio Workshop",
+      "start_timestamp": 1582038000,
+      "end_timestamp": 1582043400
+    },
+    {
+      "name": "Hallow-Queen's Spook Fest",
+      "start_timestamp": 1572559200,
+      "end_timestamp": 1572562800
+    },
+    {
+      "name": "Movie Night",
+      "start_timestamp": 1570230000,
+      "end_timestamp": 1570237200
+    },
+    {
+      "name": "Fall Meet N Greet",
+      "start_timestamp": 1569513600,
+      "end_timestamp": 1569524400
+    },
+    {
+      "name": "Lumiere Festival / Festival Lumiere",
+      "start_timestamp": 1566680400,
+      "end_timestamp": 1566698400
+    },
+    {
+      "name": "The Great India Festival 2019",
+      "start_timestamp": 1565388000,
+      "end_timestamp": 1565578800
+    },
+    {
+      "name": "Cinnaholic Day | $1 Old Skool Rolls",
+      "start_timestamp": 1563379200,
+      "end_timestamp": 1563393600
+    },
+    {
+      "name": "Grand Opening",
+      "start_timestamp": 1551900600,
+      "end_timestamp": 1551913200
+    },
+    {
+      "name": "Fall Cookies & Cram",
+      "start_timestamp": 1544277600,
+      "end_timestamp": 1544302800
+    },
+    {
+      "name": "SCEsoc Tech Meetup",
+      "start_timestamp": 1542841200,
+      "end_timestamp": 1542852000
+    },
+    {
+      "name": "2018 Ottawa Pet Expo",
+      "start_timestamp": 1541858400,
+      "end_timestamp": 1541973600
+    },
+    {
+      "name": "Ottawa's South Asian Semi-Formal 2018 (Sold Out)",
+      "start_timestamp": 1541806200,
+      "end_timestamp": 1541830500
+    },
+    {
+      "name": "United Way BeaverTails Event",
+      "start_timestamp": 1541692800,
+      "end_timestamp": 1541714400
+    },
+    {
+      "name": "Jim Watson on the Sustainable Development Goals",
+      "start_timestamp": 1539266400,
+      "end_timestamp": 1539270000
+    },
+    {
+      "name": "5$ taco and Margaritas",
+      "start_timestamp": 1536181200,
+      "end_timestamp": 1541023200
+    },
+    {
+      "name": "Final Season of America Begins!!!!",
+      "start_timestamp": 1478638800,
+      "end_timestamp": 0
+    },
+    {
+      "name": "Glengarry Pumpkin Carving Competition",
+      "start_timestamp": 1477962000,
+      "end_timestamp": 0
     }
   ]
 }
