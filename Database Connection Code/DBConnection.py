@@ -1,28 +1,45 @@
 import pymysql
 
-############### CONFIGURE THIS ###################
-# Open database connection
-db = pymysql.connect("localhost","testuser","mypassword","book")
-##################################################
+#MYSQL VERSION FOR DB CONNECTION
 
-# prepare a cursor object using cursor() method
-cursor = db.cursor()
+#Begin connection to database through MySQL - Database name "book" is dummy
+db = pymysql.connect("192.168.64.2","username","password", "book")
 
-# Prepare SQL query to READ a record into the database.
-sql = "SELECT * FROM Authors \
-WHERE AuthorID > {0}".format(0)
+def displaySecurityPolicy():
+    print("Security Policy: ")
+    print("Policy 1: ")
+    print("Policy 2: ")
+    print("Policy 3: ")
+    print("Policy 4: ")
+    print("Policy 5: ")
+    print("Policy 6: ")
+    print("Policy 7: ")
+    print("Policy 8: ")
+    print("Policy 9: ")
+    print("Policy 10: ")
 
-# Execute the SQL command
-cursor.execute(sql)
+def executeSQL(sql):
+    #prepare cursor object
+    cursor = db.cursor()
+    cursor.execute(sql)
 
-# Fetch all the rows in a list of lists.
-results = cursor.fetchall()
-for row in results:
-   id = row[0]
-   name = row[1]
-   email = row[2]
-   # Now print fetched result
-   print ("id = {0}, name = {1}, email = {1}".format(id,name,email))
+    # Fetch all the rows in a list of lists.
+    results = cursor.fetchall()
+
+    #For analysis, need to concatenate this into a string
+    for row in results:
+       # Now print fetched result
+       print (row)
+
+def executeSecurityPolicyQueries():
+    sql = "SELECT * FROM Authors WHERE AuthorID > {0}".format(0)
+    executeSQL(sql)
+
+#main for testing purposes
+if __name__ == "__main__":
+    displaySecurityPolicy()
+    executeSecurityPolicyQueries()
+
 
 # disconnect from server
 db.close()
