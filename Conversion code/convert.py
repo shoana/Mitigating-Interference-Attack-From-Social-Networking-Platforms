@@ -1,20 +1,13 @@
+import pandas as pd
 import json
-import os
 import sqlite3
 
 # Load data
-with open("file.json") as f: data=json.load(f)
+with open("file.json") as f:
+	data = json.load(f)
+df = pd.DataFrame(data)
 
-# Find all keys
-keys = []
-for row in data:
-    for key in row.keys():
-        if key not in keys:
-            keys.append(key)
-
-# Print table definition
-print ("CREATE TABLE MY_TABLE( {0} );".format(",\n  ".join(map(lambda key: "{0} VARCHAR".format(key), keys))))
-
-# Now, for all rows, print values
-for row in data:
-    print ("INSERT INTO MY_TABLE VALUES({0});""".format(",".join(map(lambda key: "'{0}'".format(row[key]) if key in row else "NULL", keys))))
+# convert the data 
+connection = sqlite3.connect("data.sql") # will create this file in the same folder as the json file (can also be changed to "data.db")
+c = connection.cursor()
+df.to_sql("installed_apps",connection)
