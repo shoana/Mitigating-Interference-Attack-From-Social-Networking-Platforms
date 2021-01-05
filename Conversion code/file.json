@@ -1,7 +1,4 @@
-{
-  "events_invited": [
-    {
-      "name": "NEM with WISE",
+   [{ "name": "NEM with WISE",
       "start_timestamp": 1585693800,
       "end_timestamp": 1585704600
     },
@@ -89,6 +86,4 @@
       "name": "Glengarry Pumpkin Carving Competition",
       "start_timestamp": 1477962000,
       "end_timestamp": 0
-    }
-  ]
-}
+    }]
