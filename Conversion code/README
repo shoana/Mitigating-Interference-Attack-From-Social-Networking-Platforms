@@ -1,0 +1,2 @@
+convert.sql: converstion code using MS SQL
+convert.py: updated code on Jan 5th, 2020 to generate mysql (or sqlite3) files
