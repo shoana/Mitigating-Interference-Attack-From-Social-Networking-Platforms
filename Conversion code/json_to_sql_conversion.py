@@ -20,7 +20,7 @@ for json in jsondata:
         firstPair = False
         keylist += key + " VARCHAR(40)"
         if type(value) in (str, str):
-            valuelist += "'" + value + "'"
+            valuelist += '"' + value + '"'
         else:
             valuelist += str(value)
     keylist += ")"
