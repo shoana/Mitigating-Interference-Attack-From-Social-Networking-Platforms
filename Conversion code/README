@@ -6,7 +6,7 @@ convert.py: updated code on Jan 5th, 2020 to generate sqlite3 files
         3. sqlite> .schema
               - will show the contents of the file (the CREATE statements)
 
-json_to_sql_conversion.py: conversion for mysql (used with myphpadmin)
+json_to_sql_conversion.py: conversion for mysql (used with phpmyadmin)
 
 
         
