@@ -1,10 +1,12 @@
 convert.sql: converstion code using MS SQL
-convert.py: updated code on Jan 5th, 2020 to generate mysql (or sqlite3) files
+convert.py: updated code on Jan 5th, 2020 to generate sqlite3 files
   - steps to see if the sql file were properly created from the json:
         1. > sqlite3 data.db
         2. sqlite> .table
         3. sqlite> .schema
               - will show the contents of the file (the CREATE statements)
+
+json_to_sql_conversion.py: conversion for mysql (used with phpmyadmin)
 
 
         
