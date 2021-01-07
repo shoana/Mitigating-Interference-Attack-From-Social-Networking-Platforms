@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS event(
+CREATE TABLE IF NOT EXISTS events_going(
   event_going VARCHAR(40),
   location_event VARCHAR(40),
   date_of_date VARCHAR(40)
