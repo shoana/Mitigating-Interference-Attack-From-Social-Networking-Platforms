@@ -69,8 +69,53 @@ def chooseFunction(input, filename):
             print("Received Instagram Message History")
             convertDataFrameToOutput(dataframe[dataframe['Time'].str.contains("10/12")], 'Common Security Questions: Childhood Home Address')
 
-#messages - natural language processing api for nouns? top hits (security questions:
-# hobbies, cities, names)
+#messages - natural language processing api for nouns (top 3 words, sports, numbers)
+def analyzeMessageContents(filename):
+    with open(filename) as json_data:
+        data = json.load(json_data)
+        df = pd.DataFrame.from_dict(data['messages'])
+        df5 = pd.DataFrame.from_dict(df['content'])
+        
+        #print("-------message content-----------\n")
+        df5.dropna(inplace=True)#data cleansing 
+    with open('messageData.txt', 'w') as f:
+        f.write(
+            df5.to_string(header = False, index = False)
+        )  
+    file = open("messageData.txt", "r")
+    lines = file.read()
+    nouns = isNoun(lines)
+    #print(nouns)
+    
+    #sports
+    sports = np.array(["soccer", "basketball", "tennis", "baseball", "golf", "running", "volleyball", "badminton", "swimming", "boxing", "rugby", "football", "cricket", "hockey", "racing", "surf", "karate", "skiing", "snowboarding", "archery", "ice skating"])
+    sportFounds = np.array(list(filter(lambda x: x in sports, nouns)))
+    #print(sportFounds)
+    
+    #most occured words (top 3)
+    most_common_words= [word for word, word_count in Counter(nouns).most_common(3)]
+    #print(most_common_words)
+    
+    
+    #most frequent number used
+    numbers = []
+    with open("messageData.txt", "r") as f: 
+        for line in f:
+            for char in line:
+                c = int(char)
+                if c.isdigtit():
+                    numbers.append(c)
+    #print(max(set(numbers), key = numbers.count))
+	
+
+#function to extract nouns
+def isNoun(lines): 
+    is_noun = lambda pos: pos[:2] == 'NN'
+    tokenized = nltk.word_tokenize(lines)
+    nouns = [word for (word, pos) in nltk.pos_tag(tokenized) if is_noun(pos)]
+    #print(nouns)
+    return nouns		
+
 
 
 if __name__ == "__main__":
